@@ -10,6 +10,7 @@ qt_add_library(Cluster_Backend STATIC
     BaseViewControl.cpp
     GaugesViewControl.h
     GaugesViewControl.cpp
+    AppContext.h
 )
 
 add_subdirectory(DataModel)

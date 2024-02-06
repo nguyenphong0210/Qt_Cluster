@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QString>
 #include "DataModel/DataModel.h"
+#include "AppContext.h"
 
 class Director : public QObject
 {
@@ -36,6 +37,8 @@ private:
     QString m_data;
     static Director* m_pInstance;
     DataModel* m_pDataModel;
+
+    GaugesViewControl* testGaugesControl = AppContext::instance().getMyGaugeViewControlInstance();
 };
 
 #endif // DIRECTOR_H

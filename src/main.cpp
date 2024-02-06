@@ -4,6 +4,7 @@
 #include <QThread>
 #include <Backend/dataThreading.h>
 #include <Backend/Director.h>
+#include "Backend/AppContext.h"
 
 int main(int argc, char *argv[])
 {
@@ -41,6 +42,8 @@ int main(int argc, char *argv[])
     }
     QObject::connect(&dataThreading, &DataThreading::textDataChanged, myDirector, &Director::receiveEvents);
     /////////////////////////////////////////////////
+    GaugesViewControl* GaugesControl = AppContext::instance().getMyGaugeViewControlInstance();
+    engine.rootContext()->setContextProperty("GaugesControl", GaugesControl);
 
     return app.exec();
 }

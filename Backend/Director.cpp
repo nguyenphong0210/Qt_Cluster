@@ -28,6 +28,8 @@ void Director::onUpdate()
         }
     }
 
+    testGaugesControl->Update(*m_pDataModel);
+
     m_pDataModel->Reset();
 }
 

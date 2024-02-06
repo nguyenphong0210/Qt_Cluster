@@ -29,7 +29,7 @@ signals:
 private:
     static GaugesViewControl* m_Instance;
     bool m_Visible;
-    int m_SpeedValue;
+    int m_SpeedValue = 0;
 };
 
 #endif // GAUGESVIEWCONTROL_H
